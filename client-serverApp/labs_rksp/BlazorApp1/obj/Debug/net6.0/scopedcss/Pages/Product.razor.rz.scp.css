@@ -1,0 +1,34 @@
+body[b-myjs2lortu] {
+}
+.field[b-myjs2lortu] {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.productBlock[b-myjs2lortu] {
+    display: flex;
+    flex-direction: column;
+}
+
+.label[b-myjs2lortu] {
+    width: 200px;
+}
+
+.valueField[b-myjs2lortu] {
+    width: 400px;
+}
+
+.saleProducts[b-myjs2lortu] {
+    display: flex;
+    flex-direction: column;
+}
+
+.productTag[b-myjs2lortu] {
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #706c79;
+    border-radius: 8px;
+    background-color: rgb(136, 184, 220);
+}
+

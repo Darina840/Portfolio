@@ -1,0 +1,75 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = BlazorApp1
+build_property.RootNamespace = BlazorApp1
+build_property.ProjectDir = C:\Users\Darya Rybnikova\Desktop\Учеба\4 семестр\РКСП\labs_rksp\BlazorApp1\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Darya Rybnikova\Desktop\Учеба\4 семестр\РКСП\labs_rksp\BlazorApp1
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Components/AddressList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZGRyZXNzTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Components/ProductsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0c0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Components/ServiceList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZXJ2aWNlTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Pages/AllAdresses.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsQWRyZXNzZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Pages/Catalog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Pages/Contacts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Pages/Showroom.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvd3Jvb20ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Pages/Product.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-myjs2lortu
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Pages/Services.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-qa6gi9m6gw
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-45rkf8v3vv
+
+[C:/Users/Darya Rybnikova/Desktop/Учеба/4 семестр/РКСП/labs_rksp/BlazorApp1/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-b5wscdn8ts

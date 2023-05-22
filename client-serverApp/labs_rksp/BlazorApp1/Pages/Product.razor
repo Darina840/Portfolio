@@ -1,0 +1,91 @@
+﻿@page "/product/{ProductId}"
+@using BlazorApp1.Services
+@inject NavigationManager _navigationManager
+
+<h1>Nali-сеть московских ателье</h1>
+
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-1">
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+                <button @onclick="@(() => toMain_page())" type="button" class="btn btn-outline-primary">Главная страница</button>
+                <button @onclick="@(() => toCatalog())" type="button" class="btn btn-outline-primary">Каталог</button>
+            </form>
+        </nav>
+    </header>
+</div>
+
+
+<h2>Информация о товаре</h2>
+
+@if (CurrentProduct == null)
+{
+    <PageTitle>Загрузка...</PageTitle>
+    <p>Загрузка информации о товаре...</p>
+}
+else
+{
+    <PageTitle>@CurrentProduct.Name</PageTitle>
+    <h3>@CurrentProduct.Name</h3>
+
+    <div class="col-md-5 col-lg-4"> 
+        
+    </div>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>Идентификатор</td>
+            <td>@CurrentProduct.Id</td>
+        </tr>
+        <tr>
+            <td>Название</td>
+            <td>@CurrentProduct.Name</td>
+        </tr>
+        <tr>
+            <td>Цена</td>
+            <td>@CurrentProduct.Price</td>
+        </tr>
+        <tr>
+            <td>Материал</td>
+            <td>@CurrentProduct.Material</td>
+        </tr>
+        </tbody>
+    </table>
+}
+
+<div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top">
+		<p class="col-md-4 mb-0 text-muted">&copy; Все права защищены 2022</p>
+		<ul class="nav col-md-4 justify-content-end">
+			<li class="nav-item">
+				<a href="\contacts" class="nav-link px-2 text-muted">Контакты</a>
+			</li>
+		</ul>
+	</footer>
+</div>
+
+@code {
+    [Parameter]
+    public string ProductId { get; set; } = null!;
+
+    private Data.Models.Product? CurrentProduct { get; set; }
+
+    [Inject]
+    private IProductProvider productsProvider { get; set; } = null!;
+
+    protected async override Task OnInitializedAsync()
+    {
+        CurrentProduct = await productsProvider.GetOne(Int32.Parse(ProductId));
+    }
+
+    private void toCatalog()
+    {
+        _navigationManager.NavigateTo($"catalog");
+    }
+
+    private void toMain_page()
+    {
+        _navigationManager.NavigateTo($"/");
+    }
+}
+

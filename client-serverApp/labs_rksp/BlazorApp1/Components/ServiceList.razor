@@ -1,0 +1,85 @@
+﻿@using BlazorApp1.Data.Models
+@using BlazorApp1.Services
+@inject NavigationManager _navigationManager
+
+<div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-1">
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                    <button @onclick="@(() => toMain_page())" type="button" class="btn btn-outline-dark">Главная страница</button>
+                    <button @onclick="@(() => toCatalog())" type="button" class="btn btn-outline-dark">Каталог</button>
+                </form>
+            </nav>
+        </header>
+</div>
+
+@if (Services == null)
+{
+    <p>Загружаются</p>
+}
+else if (Services.Count == 0)
+{
+    <p>Извините, произошла ошибка</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Идентификатор</th>
+            <th>Название</th>
+            <th>Цена</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var service in Services)
+        {
+            <tr  @onclick="()=>toItem(service)">
+                <td>@service.Id</td>
+                <td>@service.Name</td>
+                <td>@service.Cost</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; Все права защищены 2022</p>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item">
+                <a href="\contacts" class="nav-link px-2 text-muted">Контакты</a>
+            </li>
+        </ul>
+    </footer>
+</div>
+
+
+@code {
+    private List<Service>? Services { get; set; }
+
+    [Inject]
+    private ISProvider ServicesProvider { get; set; } = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Services = await ServicesProvider.GetAll();
+    }
+
+    private void toItem(Service service)
+    {
+        _navigationManager.NavigateTo($"service/{service.Id}");
+    }
+
+    private void toCatalog()
+    {
+        _navigationManager.NavigateTo($"catalog");
+    }
+
+    private void toMain_page()
+    {
+        _navigationManager.NavigateTo($"/");
+    }
+}

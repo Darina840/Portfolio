@@ -1,0 +1,87 @@
+﻿@page "/contacts"
+@using BlazorApp1.Services
+@inject NavigationManager _navigationManager
+
+<h1>Nali-сеть московских ателье</h1>
+
+<div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-1">
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                    <button @onclick="@(() => toMain_page())" type="button" class="btn btn-outline-dark">Главная страница</button>
+                    <button @onclick="@(() => toCatalog())" type="button" class="btn btn-outline-dark">Каталог</button>
+                </form>
+            </nav>
+        </header>
+</div>
+
+<div class="right"/>
+ <center>
+     <h1>
+         <font size="5" color="black">
+             <d>Мы всегда на связи:</d>
+         </font>
+     </h1>
+ </center>
+ <div class="container-sm">
+   
+ </div>
+ <div class="text">
+     <div class="container-lg">
+         <p>
+             <font size="4">
+                 Адресса:
+                 <button @onclick="@(() => toAddress_page())" type="button" class="btn btn-outline-dark">Найти ближайший адресс</button>
+             </font>
+         </p>
+         <p>
+             <font size="4">
+                 Режим работы:
+             </font>
+         </p>
+         <ul >
+             <li>Понедельник - Пятница : 9-22.</li>
+             <li>Суббота - Воскрсент: 10-20.</li>
+         </ul>
+         <p>
+         <font size="4">Чтобы получить консультацию  звоните по телефону +7(999)888-77-66 или пишите на почту NaLi@gmail.com . Наши приветливые консультанты с радостью ответят на все ваши вопросы. 
+         </font>
+         </p>
+         <font size="4">
+             Мы в соц. сетях:
+         </font>
+         <p>
+             <img src="pictures/insta.png" alt="Фотография 1" width="50" height="45">
+             <img src="pictures/vk.png" alt="Фотография 2" width="50" height="45">
+             <img src="pictures/tw.png" alt="Фотография 3" width="50" height="45">
+         </p>
+     </div>
+ </div>
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; Все права защищены 2022</p>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item">
+                <a href="\contacts" class="nav-link px-2 text-muted">Контакты</a>
+            </li>
+        </ul>
+    </footer>
+</div>
+
+@code {
+    
+
+    private void toCatalog()
+    {
+        _navigationManager.NavigateTo($"catalog");
+    }
+
+    private void toMain_page()
+    {
+        _navigationManager.NavigateTo($"/");
+    }
+    private void toAddress_page()
+    {
+        _navigationManager.NavigateTo($"/contacts/address");
+    }
+}
